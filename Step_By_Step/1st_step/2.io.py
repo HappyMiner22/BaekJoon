@@ -4,13 +4,3 @@ id = 'krux'
 
 print(id + '??!')
 
-
-def solution(numbers):
-    add = 0
-    for index in numbers:
-        add += index
-    average = add / len(numbers)
-
-    return average
-
-print(solution([1, 10, 43, 21, 20, 40]))

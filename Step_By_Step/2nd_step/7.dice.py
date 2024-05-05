@@ -7,7 +7,28 @@
 #3개 주사위의 나온 눈이 주어질 때, 상금을 계산하는 프로그램을 작성 하시오.
 #첫째 줄에 3개의 눈이 빈칸을 사이에 두고 각각 주어진다.
 
-a, b, c = map(int, input().split)
+a, b, c = map(int, input().split())
+if a > 6 or b > 6 or c > 6:
+    print("다시 입력하시오")
 
-if a == b:
-    if a == c:
+else:
+    if a == b and b == c:
+        print(10000 + a*1000)
+
+    elif a == b or a == c:
+        print(1000 + a*100)
+
+    elif b == c or b == a:
+        print(1000 + b*100)
+
+    else:
+        if a > b:
+            if a > c:
+                print(a*100)
+            else:
+                print(c*100)
+        elif a < b:
+            if b < c:
+                print(c*100)
+            else:
+                print(b*100)
